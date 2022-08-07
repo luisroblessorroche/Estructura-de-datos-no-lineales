@@ -2,12 +2,12 @@
 //Implementa un subprograma que, dados un árbol binario y un nodo del mismo, determine
 //la profundidad de este nodo en dicho árbol.
 
-template <typename T> int profundidad_Abin(const Abin<T>::nodo n, const Abin<T> &A)
+template <typename T> int profundidad_Abin(typename Abin<T>::nodo n, const Abin<T> &A)
 {
 	return profundidad_Abin_rec(n,A);
 }
 
-template <typename T> int profundidad_Abin_rec(const Abin<T>::nodo n, const Abin<T> &A)
+template <typename T> int profundidad_Abin_rec(typename Abin<T>::nodo n, const Abin<T> &A)
 {
 	if(n == Abin<T>::NODO_NULO)
 	{

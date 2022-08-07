@@ -6,7 +6,7 @@ template <typename T> int contar_altura(const Abin<T> &A)
 	return contar_altura_rec(A.raiz(),A);
 }
 
-template <typename T> int contar_altura_rec(const Abin<T>::nodo n, const Abin<T> &A)
+template <typename T> int contar_altura_rec(typename Abin<T>::nodo n, const Abin<T> &A)
 {
 	if(n == Abin<T>::NODO_NULO)
 	{

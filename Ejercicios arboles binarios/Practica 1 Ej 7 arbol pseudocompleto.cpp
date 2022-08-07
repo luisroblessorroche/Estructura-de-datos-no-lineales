@@ -16,7 +16,7 @@ template<typename T> bool abin_pseudocompleto(const Abin<T> &A)
 	}
 }
 
-template <typename T> int altura_abin(const Abin<T>::nodo n, const Abin<T> &A)
+template <typename T> int altura_abin(typename Abin<T>::nodo n, const Abin<T> &A)
 {
 	if(n == Abin<T>::NODO_NULO)
 	{
@@ -28,7 +28,7 @@ template <typename T> int altura_abin(const Abin<T>::nodo n, const Abin<T> &A)
 	}
 }
 
-template <typename T> bool abin_pseudocompleto(const Abin<T>::nodo n, const Abin<T> &A, int altura)
+template <typename T> bool abin_pseudocompleto(typename Abin<T>::nodo n, const Abin<T> &A, int altura)
 {
 	if(profundidad_nodo(n,A) == altura -1)
 	{
@@ -41,7 +41,7 @@ template <typename T> bool abin_pseudocompleto(const Abin<T>::nodo n, const Abin
 }
 
 
-template <typename T> int profundidad_nodo(const Abin<T>::nodo n, const Abin<T> &A)
+template <typename T> int profundidad_nodo(typename Abin<T>::nodo n, const Abin<T> &A)
 {
 	if(n == Abin<T>::NODO_NULO)
 	{
@@ -53,7 +53,7 @@ template <typename T> int profundidad_nodo(const Abin<T>::nodo n, const Abin<T> 
 	}
 }
 
-template <typename T> bool nodo_tiene_dos_o_cero_hijos(const Abin<T>nodo n, const Abin<T> &A)
+template <typename T> bool nodo_tiene_dos_o_cero_hijos(typename Abin<T>nodo n, const Abin<T> &A)
 {
 	return ((A.hijoIzqdo(n) == Abin<T>::NODO_NULO && A.hijoDrcho(n) == Abin<T>::NODO_NULO) ||
 			(A.hijoIzqdo(n) != Abin<T>::NODO_NULO && A.hijoDrcho(n) != Abin<T>::NODO_NULO));

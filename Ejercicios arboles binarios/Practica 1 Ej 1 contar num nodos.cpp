@@ -7,7 +7,7 @@ template <typename T> int contar_num_nodos(const Abin<T> &A)
 	return contar_num_nodos_rec(A.raiz(),A);
 }
 
-template <typename T> int contar_num_nodos_rec(const Abin<T>::nodo n, const Abin<T> &A)
+template <typename T> int contar_num_nodos_rec(typename Abin<T>::nodo n, const Abin<T> &A)
 {
 	if(n == Abin<T>::NODO_NULO)
 	{
