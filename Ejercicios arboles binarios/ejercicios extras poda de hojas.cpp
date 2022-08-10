@@ -14,21 +14,13 @@ template <typename T> void poda_nodos_1_hijo_rec(typename Abin<T>::nodo n, const
 		{
 			if(hijo_es_hoja(n,A))
 			{
-				poda_nodos_1_hijo_rec(A.hijoIzqdo(n),A);
-				poda_nodos_1_hijo_rec(A.hijoDrcho(n),A);
 				eliminar_hijo(n,A);
 			}
-			else
-			{
-				poda_nodos_1_hijo_rec(A.hijoIzqdo(n),A);
-				poda_nodos_1_hijo_rec(A.hijoDrcho(n),A);	
-			}
 		}
-		else
-		{
-			poda_nodos_1_hijo_rec(A.hijoIzqdo(n),A);
-			poda_nodos_1_hijo_rec(A.hijoDrcho(n),A);
-		}
+		
+		poda_nodos_1_hijo_rec(A.hijoIzqdo(n),A);
+		poda_nodos_1_hijo_rec(A.hijoDrcho(n),A);
+		
 	}
 }
 
