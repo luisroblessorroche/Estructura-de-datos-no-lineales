@@ -55,7 +55,7 @@ template <typename T> void podar_descendientes(Abin<T>::nodo n, Abin<T> &A)
 	}
 	if(A.hijoDrcho(n) != Abin<T>::NODO_NULO)
 	{
-		A.eliminarHijoDrcho(n);
 		podar_descendientes(A.hijoDrcho(n),A);
+		A.eliminarHijoDrcho(n);
 	}
 }
